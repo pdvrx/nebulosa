@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Bebas Neue', cursive;
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: black;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    padding: 2vh 3vw;
+    color: wheat;
+}
+
+header h1{
+    user-select: none;
+}
+
+ul{
+    display: flex;
+    gap: 2vw;
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: wheat;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+a:hover{
+    transition: all .2s ease-in-out;
+    transform: scale(1.1);
+}
+
+main{
+    background-color: black;
+}
+
+
+section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.main-video iframe{
+    aspect-ratio: 16/9;
+    height: 90vh;
+    padding: 15px;
+    z-index: 1;
+    position: relative;
+    filter: blur(12px);
+}
+
+.blur{
+    z-index: 3;
+    position: absolute;
+    font-size: 10vw;
+    font-style: italic;
+    color: wheat;
+    padding-right: 30px;
+    user-select: none;
+    filter: blur(8px);
+}
+
+.main-video h2{
+    z-index: 3;
+    position: absolute;
+    font-size: 10vw;
+    font-style: italic;
+    color: wheat;
+    padding-right: 30px;
+    user-select: none;
+}
+
+
+
+@media screen and (max-width: 480px){
+
+    .main-video h2{
+        font-size: 14vw;
+    }
+
+}
