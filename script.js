@@ -43,31 +43,34 @@ class MobileNavbar {
   );
   mobileNavbar.init();
   
-    const btn1 = document.querySelector(".artista:nth-child(1)");
+    const btn1 = document.querySelector(".artista:nth-child(1) :nth-child(1)");
     btn1.onclick = function(){
       var bio=document.querySelector(".artista :nth-child(2)");
       bio.classList.toggle("bio-active")
+      console.log("o")
 
     }
 
-    const btn2 = document.querySelector(".artista:nth-child(2)");
+    const btn2 = document.querySelector(".artista:nth-child(2) :nth-child(1)");
     btn2.onclick = function(){
       var bio=document.querySelector(".artista:nth-child(2) :nth-child(2)");
       bio.classList.toggle("bio-active")
       console.log(bio)
     }
 
-    const btn3 = document.querySelector(".artista:nth-child(3)");
+    const btn3 = document.querySelector(".artista:nth-child(3) :nth-child(1)");
     btn3.onclick = function(){
       var bio=document.querySelector(".artista:nth-child(3) :nth-child(2)");
       bio.classList.toggle("bio-active")
     }
 
-    const btn4 = document.querySelector(".artista:nth-child(4)");
+    const btn4 = document.querySelector(".artista:nth-child(4) :nth-child(1)");
     btn4.onclick = function(){
       var bio=document.querySelector(".artista:nth-child(4) :nth-child(2)");
       bio.classList.toggle("bio-active")
     }
+
+    console.log(document.querySelector(".artista:nth-child(2) :nth-child(3)"))
 
     
 
