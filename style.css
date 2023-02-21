@@ -126,6 +126,7 @@ section{
     .main-video iframe{
 
         height: 100vh;
+        overflow-x: hidden;
     }
 
     header h1{
