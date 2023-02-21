@@ -157,6 +157,12 @@ section{
         overflow-x: hidden;
     }
 
+    section{
+        width: 100%;
+        max-width: 100vw;
+        overflow: hidden;
+    }
+
     .nav-list{
         position: absolute;
         top:8vh;
