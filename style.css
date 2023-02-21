@@ -21,8 +21,11 @@ header{
     box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
 }
 
-header h1{
+#titulo{
     user-select: none;
+    color: wheat;
+    text-decoration: none;
+    font-size: 2rem;
 }
 
 ul{
@@ -37,11 +40,6 @@ ul li a{
     text-transform: uppercase;
     font-weight: bold;
     font-size: 1.5rem;
-}
-
-a:hover{
-    transition: all .2s ease-in-out;
-    transform: scale(1.1);
 }
 
 .mobile-menu{
@@ -118,7 +116,82 @@ section{
     text-align: center;
 } 
 
+.artistas{
+    padding-top: 7vh;
+}
 
+.artista{
+    width: 100%;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-image: url('kalvin.png');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.artista:nth-child(1){
+background-color: red;
+}
+
+.artista h2{
+    color: wheat;
+    font-size: 4rem;
+    text-decoration: none;
+    letter-spacing: 3px;
+    cursor: pointer;
+    user-select: none;
+}
+
+
+.artista p{
+    font-size: 1.5rem;
+    color: wheat;
+}
+
+.social{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.social a{
+    color: wheat;
+    font-size: 1.3rem;
+    text-decoration: none;
+    gap: 2vw;
+}
+
+.bio-desactive{
+    display: none;
+}
+
+
+.artista-active{
+    color: wheat;
+    font-size: 4rem;
+    text-decoration: none;
+    letter-spacing: 3px;
+    cursor: pointer;
+    user-select: none;
+}
+
+.bio-active{
+    display: block;
+}
+
+.bio-active p{
+    display: block;
+}
+
+.bio-active a{
+    display: block;
+}
 
 
 @media screen and (max-width: 480px){
