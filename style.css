@@ -153,21 +153,22 @@ section{
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: black;
+    place-content: center;
+    place-items: center;
 
 }
 
 .artista{
-    width: 100%;
     height: 250px;
     display: flex;
     flex-direction: column;
     color: wheat;
 }
 
+
 .nome-bio{
     color: wheat;
     z-index: 2;
-
 }
 
 .nome-bio h2{
@@ -178,6 +179,7 @@ section{
     user-select: none;
     z-index: 2;
     text-align: right;
+    transform: translateY(50px);
 }
 
 .bg-artista{
@@ -190,13 +192,13 @@ section{
     height: 250px;
     position: absolute;
     filter: brightness(50%);
-    pointer-events: none;
-    z-index: 1;
-    transition: background-color 1s ease 0s;
+    z-index: 1;     
+    transition: linear 0.3s;
 }
 
+
 .artista p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding-bottom: 10px;
     text-align: right;
 }
@@ -209,18 +211,42 @@ section{
 }
 
 .bio-desactive{
-    display: none;
-    z-index: 6;
+    opacity: 0;
+    z-index: -5;
+    padding-left: 15vw;
+    transform: translateX(-100vw);
+}
+
+.artista:nth-child(even) .bio-desactive{
+    transform: translateX(100vw);
+    opacity: 0;
+    z-index: -5;
+    padding-left: 15vw;
 }
 
  .bio-active{
-    display: block;
+    z-index: 6;
+    opacity: 1;
     padding-left: 15vw;
     padding-right: 5vw;
+    transition: 0.5s;
+    transform: translateY(0vw);
+}
+
+.artista:nth-child(even) .bio-active{
+    z-index: 6;
+    opacity: 1;
+    padding-left: 15vw;
+    padding-right: 5vw;
+    transition: 0.5s;
+    transform: translateX(0vw);
 }
 
 .bg-active{
-    background-color: black;
+    background-color: rgb(1, 2, 2);
+    background-image: url('pdvrx-nobg-outline.png');
+    filter: none;
+
 
 }
 
@@ -229,7 +255,11 @@ section{
     justify-content: right;
     align-items: right;
     width: 80%;
+    transform: translateY(-50px);
+    transition: 0.2s;
 }
+
+
 
 
 
@@ -316,6 +346,7 @@ section{
 
     .artista h2{
         font-size: 3rem;
+        transform: translateY(-30px);
     }
 
     .artista p{
@@ -324,7 +355,7 @@ section{
     }
 
     .artistas{
-        padding-top: 7vh;
+        padding-top: 80px;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -337,17 +368,12 @@ section{
         height: 252px;
     }
 
-    .bio-active{
-        display: block;
-        margin-left: 0vw;
-        margin-right: 0vw;
-        padding: 0 5vw;
-        justify-content: center;
-        align-items: center;
-    }
+
 
     .social{
         justify-content: center;
+        gap: 20px;
+        padding-top: 7px;
     }
 
     .btn-active {
@@ -355,6 +381,32 @@ section{
         justify-content: center;
         align-items: center;
         width: 80%;
+        transform: translateY(0px);
+    }
+
+    .bio-active{
+        opacity: 1;
+        z-index: 6;
+        margin-left: 0vw;
+        margin-right: 0vw;
+        padding: 0 5vw;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .bio-active p{
+        -webkit-text-stroke-color: rgb(1, 2, 2);
+        -webkit-text-stroke-width: 0.5px
+    }
+
+    .artista:nth-child(even) .bio-active{
+        z-index: 6;
+        opacity: 1;
+        padding-left: 0vw;
+        padding-right: 0vw;
+        transition: 0.5s;
+        transform: translateX(0);
+        padding: 0 5vw;
     }
 
 }
