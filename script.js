@@ -117,9 +117,7 @@ class MobileNavbar {
       btn8.classList.toggle("btn-active")
     }
 
-    console.log(document.querySelector(".artista:nth-child(1)"))
 
-    
 
 
 

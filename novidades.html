@@ -5,37 +5,79 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nebulosa</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
+
     <header>
-        <h1>Nebulosa</h1>
+        <a id="titulo"href="index.html">Nebulosa</a>
         <div class="mobile-menu">
             <div class="line1"></div>
             <div class="line2"></div>
             <div class="line3"></div>
         </div>
         <ul class="nav-list">
-            <li><a href="#">novidades</a></li>
+            <li><a href="novidades.html">novidades</a></li>
             <li><a href="artistas.html">nossos artistas</a></li>
-            <li><a href="#sobre-nos">sobre nós</a></li>
+            <li><a href="index.html">sobre nós</a></li>
         </ul>
     </header>
 
-        <main>
-            <section>
-                
-            </section>
-        </main>
+    <main>
+        <section>
+            <div class="main-news">
+                <h2>Acompanhe nossos ultimos lançamentos</h2>
+                <div class="carrosel">
+                    <div class="news"> 
+                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
+                        <h3>Lorem ipsum</h3>
+                    </div>
+                    <div class="news"> 
+                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
+                        <h3>Lorem ipsum</h3>
+                    </div> 
+                    <div class="news"> 
+                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
+                        <h3>Lorem ipsum</h3>
+                    </div> 
+                    <div class="news"> 
+                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
+                        <h3>Lorem ipsum</h3>
+                    </div> 
+                    <div class="news"> 
+                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
+                        <h3>Lorem ipsum</h3>
+                    </div>                         
+                </div>
+            </div>
+        </section>
+    </main>
 
     <footer>
         <h3>nos acompanhe em nossas redes sociais:</h2>
         <a href="https://twitter.com/nebulosa_inc" target="_blank"><i class="fa-brands fa-twitter"></i></a>
         <a href="https://instagram.com/nebulosa_inc?igshid=YmMyMTA2M2Y=" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-        <a href="https://www.youtube.com/@nebulosainc.4027"><i class="fa-brands fa-youtube" target="_blank"></i></a>
+        <a href="https://www.youtube.com/@nebulosainc.4027" target="_blank"><i class="fa-brands fa-youtube" target="_blank"></i></a>
     </footer>
-    
-    <script src="script.js"></script>
+
+    <script src="/jquery/jquery-3.6.3.js"></script>
+    <script src="/jquery/jquery-migrate-3.4.1.js"></script>
+    <script src="slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/858c1077eb.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <script>
+        $('.carrosel').slick({
+            arrows: true,
+            dots: false,
+            infinite: true,
+            speed: 500,
+            slidesToShow: 1,
+            centerMode: false,
+            variableWidth: true,
+            draggable: true
+        });
+    </script>
 </body>
 </html>
