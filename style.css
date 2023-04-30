@@ -331,9 +331,12 @@ section{
         overflow-x: hidden;
     }
 
-    header h1{
+    #titulo{
+        margin-top: 2px;
         margin-left: 9vw;
     }
+
+    
 
     .main-video h2{
         font-size: 12vw;
@@ -383,7 +386,7 @@ section{
         transition: 0.3s ease-in;
         padding: 10px;
         border-radius: 3px;
-        height: 100vh;
+        height: 50vh;
     }
 
     .nav-list a{
@@ -486,15 +489,17 @@ section{
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 1000px;
-        background-color: blue;
-        
+        width: 70vw;
+    }
+
+    .container-lancamento iframe{
+        height: 200px;
     }
     
     .slider{
         position: absolute;
         width: 100%;
-        opacity: 0;
+        opacity: 1;
         z-index: 2;
         transition: opacity .2s;
     }
@@ -518,7 +523,7 @@ section{
         height: 30px;
         border: none;
         filter: invert(1);
-        background-color: transparent;
+        background-color: red;
         cursor: pointer;
     }
     
