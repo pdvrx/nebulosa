@@ -27,30 +27,17 @@
 
     <main>
         <section>
-            <div class="main-news">
-                <h2>Acompanhe nossos ultimos lançamentos</h2>
-                <div class="carrosel">
-                    <div class="news"> 
-                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
-                        <h3>Lorem ipsum</h3>
+            <div class="container-slider">
+                <button id="prev-button"> <img src="arrow.png" alt="prev-button"> </button>
+                    <div class="container-lancamento">
+                        <iframe class="slider" height="430" src="https://www.youtube.com/embed/mupdnhtPdOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="slider" height="430" src="https://www.youtube.com/embed/1FSmHr934OI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="slider" height="430" src="https://www.youtube.com/embed/mupdnhtPdOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="slider" height="430" src="https://www.youtube.com/embed/mupdnhtPdOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="slider" height="430" src="https://www.youtube.com/embed/mupdnhtPdOM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     </div>
-                    <div class="news"> 
-                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
-                        <h3>Lorem ipsum</h3>
-                    </div> 
-                    <div class="news"> 
-                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
-                        <h3>Lorem ipsum</h3>
-                    </div> 
-                    <div class="news"> 
-                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
-                        <h3>Lorem ipsum</h3>
-                    </div> 
-                    <div class="news"> 
-                        <span> <iframe width="560" height="315" src="https://www.youtube.com/embed/W9JH5u1RFtM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe> </span>
-                        <h3>Lorem ipsum</h3>
-                    </div>                         
-                </div>
+                    <span class="glow-container"></span>
+                <button id="next-button"> <img src="arrow.png" alt="nex"> </button>
             </div>
         </section>
     </main>
@@ -62,22 +49,46 @@
         <a href="https://www.youtube.com/@nebulosainc.4027" target="_blank"><i class="fa-brands fa-youtube" target="_blank"></i></a>
     </footer>
 
-    <script src="/jquery/jquery-3.6.3.js"></script>
-    <script src="/jquery/jquery-migrate-3.4.1.js"></script>
-    <script src="slick/slick.min.js"></script>
     <script src="https://kit.fontawesome.com/858c1077eb.js" crossorigin="anonymous"></script>
     <script src="script.js"></script>
     <script>
-        $('.carrosel').slick({
-            arrows: true,
-            dots: false,
-            infinite: true,
-            speed: 500,
-            slidesToShow: 1,
-            centerMode: false,
-            variableWidth: true,
-            draggable: true
-        });
+            const slider = document.querySelectorAll('.slider');
+    const btnPrev = document.getElementById('prev-button');
+    const btnNext = document.getElementById('next-button');
+    
+    let currentSlide = 0;
+    
+    function hideSlider() {
+      slider.forEach(item => item.classList.remove('on'))
+    }
+    
+    function showSlider() {
+      slider[currentSlide].classList.add('on')
+    }
+    
+    function nextSlider() {
+      hideSlider()
+      if(currentSlide === slider.length -1) {
+        currentSlide = 0
+      } else {
+        currentSlide++
+      }
+      showSlider()
+    }
+    
+    function prevSlider() {
+      hideSlider()
+      if(currentSlide === 0) {
+        currentSlide = slider.length -1
+      } else {
+        currentSlide--
+      }
+      showSlider()
+    }
+    
+    btnNext.addEventListener('click', nextSlider)
+    btnPrev.addEventListener('click', prevSlider)
+
     </script>
 </body>
 </html>
