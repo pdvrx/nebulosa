@@ -472,6 +472,67 @@ section{
         padding: 0 5vw;
     }
 
+    .container-slider{
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        gap: 1rem;
+    }
+    
+    .container-lancamento{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 1000px;
+        background-color: blue;
+        
+    }
+    
+    .slider{
+        position: absolute;
+        width: 100%;
+        opacity: 0;
+        z-index: 2;
+        transition: opacity .2s;
+    }
+    
+    .glow-container{
+        background-color: wheat;
+        z-index: 1;
+        width: 1000px;
+        position: absolute;
+        height:430px;
+        filter: blur(100px);
+        opacity: 0.1;
+    }
+    
+    .on{
+        opacity: 1;
+    }
+    
+    #prev-button, #next-button{
+        width: 30px;
+        height: 30px;
+        border: none;
+        filter: invert(1);
+        background-color: transparent;
+        cursor: pointer;
+    }
+    
+    #prev-button img, #next-button img{
+        width: 100%;
+        height: 100%;
+    
+    }
+    
+    #prev-button{
+        transform: rotate(180deg);
+    }
+
+
 }
 
 @keyframes navLinkFade {
